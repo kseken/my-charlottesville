@@ -1,0 +1,389 @@
+/* Color Palette:
+*/
+
+/* FONTS
+font-family: 'Karla', sans-serif; --- Body text font
+font-family: 'Arvo', serif; --- Headline, Titles dont
+font-family: 'Averia Libre', cursive;  --- BIg main headline font
+*/
+
+/*----------------------------------------------------
+GLOBAL STYLES
+-----------------------------------------------------*/
+
+html {
+	box-sizing: border-box;
+	font-size: 1.25rem;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	font-family: 'Karla', sans-serif;
+	line-height: 1.25rem;
+	margin: 0 auto;
+	background-color: #eaeaea;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Bitter', serif;
+	letter-spacing: 0.04em;
+}
+h1 {
+	font-weight: ;
+	font-size: ;
+	line-height: ;
+	margin: .5rem 0;
+}
+h2 {
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin: 1.5rem 0;
+}
+h3 {
+	font-weight: 400;
+	font-size: 1.25rem;
+	margin: .5rem 0 .7rem;
+}
+h4 {
+	margin: .5rem 0 .2rem;
+}
+
+p {
+	margin: 0;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+}
+li {
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+main,
+aside,
+footer {
+  /*background: #eaeaea;*/
+  background: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.grid {
+	display: grid; /* sets up 2 column layout base */
+	grid-template-columns: repeat(4, 1fr); /* makes basis of grid 4 columns 1 fr each */
+	grid-template-rows: auto auto auto; /* makes the rows 10% of width, 30%, and 10% */
+	grid-gap: 1em;
+	margin: 0 auto;
+	max-width: 80em;
+	padding: 0 1.5em 1.5em 1.5em;
+	margin-top: 3.5em;
+}
+
+
+/* NAVIGATION 
+-----------------------------------------------------*/
+
+nav {
+	text-align: center;
+	background-color: #ffffff;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: .1rem;
+	box-shadow: 0 4px 10px -4px #999;
+}
+
+nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+nav li {
+	display: inline-block;
+	padding: .8rem .8rem;
+	text-transform: uppercase;
+	/*border: 1px solid #7E57C2;*/
+}
+
+nav li:hover {
+	background-color: #95C9C6;
+	transition: background-color 0.5s ease;
+	font-weight: bold;
+}
+
+nav img {
+	width: 3rem;
+	height: 3rem;
+	vertical-align: top;
+}
+
+.nav-logo {
+	padding: 0;
+	border: 5px #ffffff solid;
+	border-radius: 50%;
+}
+
+.nav-logo:hover {
+	background-color: #ffffff;
+	border: 5px #95C9C6 solid;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 199px;
+	background-color: #f1f1f1;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content li {
+	display: block;
+}
+
+.dropdown-content li:hover {
+	background-color: #95D8D4;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #95C9C6;
+}
+
+/* MAIN 
+-----------------------------------------------------*/
+
+main {
+	grid-column: 1 / span 3;
+	border-top: .3rem #455C68 solid;
+	border-left: .3rem #455C68 solid;
+/*	flex-flow: column;
+	justify-content: flex-start;*/
+	padding: 1rem;
+}
+
+main h2, h3 {
+	padding-left: 1%;
+}
+
+.mf-drink-specials {
+/*	display: flex;
+	flex-flow: row wrap;*/
+	width: 100%;
+}
+
+.daily-drink-specials {
+/*	display: flex;
+	flex-flow: row wrap;*/
+	width: 100%;
+}
+
+.bar {
+	/*width: 100%;*/
+	display: flex;
+	flex-flow: row;
+	align-items: stretch;
+	/*background-color: #cccccc;*/
+	text-align: center;
+/*	border-radius: 1rem;*/
+	margin: 1%;
+	/*padding: 1%;*/
+	min-height: 4rem;
+}
+
+.bar h4 {
+	margin: 0;
+	font-family: 'Karla', sans-serif;
+	font-size: 1.2rem;
+}
+
+/*
+:bar:before {
+  content:"";
+  display:block;
+  height:5em; --- fixed header height ---
+  margin: -5em 0 0; --- negative fixed header height ---
+}
+*/
+
+.bar-name {
+	width: 30%;
+	padding: 0.4rem;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	background-color: #95C9C6;
+}
+
+.bar-name:hover {
+	border-top: .3rem #95C9C6 solid;
+	border-bottom: .3rem #000000 solid;
+}
+
+.time {
+	width: 20%;
+	font-weight: 700;
+	font-size: 1.1rem;
+	padding: 0.4rem;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-flow: column;
+	border: 2px #95C9C6 solid;
+	border-right: none;
+	border-left: none;
+	/*margin: auto;*/
+}
+
+/*.colon {
+	width: 5%;
+	font-size: 3.5rem;
+	font-weight: 700;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}*/
+
+.deals {
+	width: 50%;
+	padding: 0.4rem;
+	/*margin: auto;*/
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	border: 2px #95C9C6 solid;
+	border-left: none;
+}
+
+/* SIDEBAR
+-----------------------------------------------------*/
+
+aside {
+	grid-column: span 2;
+	grid-row: auto;
+	padding: 1rem;
+	flex-flow: column;
+	justify-content: flex-start;
+	border-top: .3rem #455C68 solid;
+	border-left: .3rem #455C68 solid;
+	/*align-items: stretch;*/
+}
+
+aside ul {
+	list-style-type: none;
+}
+
+aside li {
+	/*border: 1px solid #000000;*/
+	margin: .3rem 0;
+	padding: .25rem;
+}
+
+aside li:hover {
+	/*background-color: #F8BBD0;*/
+	/*transition: background-color 0.5s ease;*/
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+aside a {
+	font-size: 1.1rem;
+	display: block;
+}
+
+.anchor {
+	display: block;
+	height: 60px;
+	margin-top: -60px;
+	visibility: hidden;
+}
+
+/* HEADER AND FOOTER 
+-----------------------------------------------------*/
+
+header, 
+footer {
+	grid-column: 1 / span 5;
+}
+
+/* ----- Header ----- */
+
+header {
+	padding: 1.5rem;
+	justify-content: space-between;
+	background-color: #455C68;
+	color: #ffffff;
+	margin-top: 1rem;
+}
+
+/* ----- Footer ----- */
+
+footer {
+	padding: 1rem;
+}
+
+footer {
+	padding: 1rem;
+	background-color: #455C68;
+	color: #ffffff;
+}
+
+/*----------------------------------------------------
+MEDIA QUERRIES 
+-----------------------------------------------------*/
+
+@media (max-width: 700px) {
+  
+	 main,
+	 aside {
+	 	grid-column: 1 / span 5;
+	}
+  
+}
+
+/* Demo Specific Styles */
+/*
+
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+header,
+main,
+aside,
+footer {
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header,
+footer {
+  height: 10vw;
+}
+
+*/
