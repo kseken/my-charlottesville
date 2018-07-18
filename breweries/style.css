@@ -50,7 +50,18 @@ h3 {
 	margin: .5rem 0 .7rem;
 }
 h4 {
-	margin: .5rem 0 .2rem;
+	margin: .5rem 0 .5rem;
+}
+
+h5 {
+	font-size: .9rem;
+	margin: .5rem 0 .5rem;
+}
+
+h6 {
+	font-size: .75rem;
+	font-style: italic;
+	margin: .2rem 0 .8rem;
 }
 
 p {
@@ -101,8 +112,8 @@ nav {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding-bottom: .1rem;
 	box-shadow: 0 4px 10px -4px #999;
+	z-index: 1;
 }
 
 nav ul {
@@ -115,30 +126,20 @@ nav li {
 	display: inline-block;
 	padding: .8rem .8rem;
 	text-transform: uppercase;
+	font-weight: bold;
 	/*border: 1px solid #7E57C2;*/
 }
 
 nav li:hover {
 	background-color: #95C9C6;
 	transition: background-color 0.5s ease;
-	font-weight: bold;
 }
 
 nav img {
-	width: 3rem;
-	height: 3rem;
+	width: 2.7rem;
+	height: 2.7rem;
 	vertical-align: top;
-}
-
-.nav-logo {
-	padding: 0;
-	border: 5px #ffffff solid;
-	border-radius: 50%;
-}
-
-.nav-logo:hover {
-	background-color: #ffffff;
-	border: 5px #95C9C6 solid;
+	padding-top: .1rem;
 }
 
 .dropdown {
@@ -169,6 +170,10 @@ nav img {
 
 .dropdown:hover .dropbtn {
 	background-color: #95C9C6;
+}
+
+.mobile-submenu {
+	display: none;
 }
 
 
@@ -208,7 +213,7 @@ main {
 }
 
 .logo {
-	grid-column: 0 / span 1;
+	grid-column: span 1;
 	padding: .5rem;
 	/*background-color: #B3E5FC;*/
 	text-align: center;
@@ -302,6 +307,9 @@ header {
 /* ----- Footer ----- */
 
 footer {
+	flex-flow: column;
+	align-items: center;
+	text-align: center;
 	padding: 1rem;
 	background-color: #455C68;
 	color: #ffffff;
@@ -318,10 +326,112 @@ footer {
 MEDIA QUERRIES 
 -----------------------------------------------------*/
 
-@media (max-width: 700px) {
-  
-	 main {
-	 	grid-column: 1 / span 5;
+@media all and (max-width: 990px) {
+
+	h1 {
+	font-size: 7vw;
+	line-height: 9vw;
+	margin: .4rem 0;
 	}
-  
+
+	h2 {
+	font-size: 6vw;
+	line-height: 7.5vw;
+	margin: 1rem 0;
+	}
+
+	h3 {
+	font-size: 4.5vw;
+	margin: .5rem 0 .7rem;
+	}
+
+	h4 {
+	font-size: 4.5vw;
+	line-height: 5vw;
+	}
+
+	.desktop-menu {
+		display: none;
+	}
+
+	.mobile-submenu {
+		display: block;
+		width: auto;
+		height: auto;
+		position: relative;
+	}
+
+	.mobile-submenu-content {
+		display: none;
+		width: auto;
+		height: auto;
+		position: absolute;
+		background-color: #ffffff;
+	}
+
+	.mobile-submenu:hover .mobile-submenu-content {
+		display: block;
+	}
+
+	header {
+		padding: 4vw;
+	}
+
+	section {
+		padding: 4vw;
+	}
+
+	.brewery {
+		display: flex;
+		flex-flow: column;
+	}
+
+	.brewery a {
+		padding: .75vw;
+		font-size: 16px;
+	}
+
+	.logo img {
+		width: 40vw;
+	}
+
+	.logo {
+		padding: 0;
+	}
+
+	.address {
+		margin-top: 5%;
+	}
+
+	.brewery-info {
+		padding: 0;
+	}
+
+	.brewery-info-header {
+		flex-flow: column;
+		justify-content: flex-start;
+		text-align: center;
+	}
+
+	.brewery-info-header h2 {
+		margin: 0;
+		margin-bottom: 2vw;
+	}
+
+	.brewery-info-main {
+		flex-flow: column;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 5vw;
+	}
+
+	.brewery-hours,
+	.brewery-flights,
+	.brewery-food {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+
 }

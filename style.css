@@ -116,10 +116,6 @@ nav {
 	z-index: 1;
 }
 
-/*.desktop-menu {
-	line-height: 1rem;
-}*/
-
 nav ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -144,17 +140,6 @@ nav img {
 	height: 2.7rem;
 	vertical-align: top;
 	padding-top: .1rem;
-}
-
-.nav-logo {
-	padding: 0;
-	border: 5px #ffffff solid;
-	border-radius: 50%;
-}
-
-.nav-logo:hover {
-	background-color: #ffffff;
-	border: 5px #95C9C6 solid;
 }
 
 .dropdown {
